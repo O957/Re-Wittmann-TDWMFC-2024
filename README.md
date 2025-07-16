@@ -57,6 +57,9 @@ This repository exists because:
 * I believe that engaging with Wittmann_TDWMFC_2024 helps me in this regard.
 * I am interested in reproducing / replicating scientific enterprises.
 
+> [!NOTE]
+> This project represents my first public reproduction / replication effort. Subsequent public efforts I take in this regard may be structured differently. Even though this project has been declared FINISHED, I may sync it with future structural standards I adopt for reproduction / replication efforts.
+
 ## [Original Paper](#original-paper)
 
 __Citation__:
