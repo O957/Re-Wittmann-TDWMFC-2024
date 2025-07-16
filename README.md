@@ -1,10 +1,11 @@
-# Re-_The Demographic-Wealth Model For Cliodynamics_
+# Partial Replication Of (The Demographic-Wealth Model For Cliodynamics)
 
-__NOTE__: This repository is quite new and contains NO content of note!
+> [!IMPORTANT]
+> This project is currently ACTIVE but not FINISHED. As such, there may be parts of this repository that do not make much sense or that are broken!
 
 ## Table Of Contents
 
-*
+* [Installation](installatio)
 
 ## [Installation](#installation)
 
