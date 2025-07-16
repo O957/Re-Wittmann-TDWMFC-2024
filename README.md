@@ -1,15 +1,39 @@
 # Partial Replication Of (The Demographic-Wealth Model For Cliodynamics)
 
-> [!IMPORTANT]
+> [!CAUTION]
 > This project is currently ACTIVE but not FINISHED. As such, there may be parts of this repository that do not make much sense or that are broken!
 
 ## Table Of Contents
 
-* [Installation](installatio)
+* [This Repository](installatio)
 
-## [Installation](#installation)
+## [This Repository](#repository)
 
-_How can one use this code?_
+Contained therein:
+
+* What is this repository?
+* What is in this repository?
+* What background information is needed?
+
+__What is this repository?__
+
+This repository consists of a partial replication in Python of the 2024 paper (The Demographic-Wealth model for cliodynamics) by Wittmann and Kuehn, abbreviated henceforth as Wittmann_TDWMFC_2024.
+
+Specifically, this entails that:
+
+* [ ] Code reproductions of all figures from Wittmann_TDWMFC_2024.
+* [ ] A `streamlit` application for running experiments with the demographic fiscal model (henceform DFM) and demographic wealth models (henceforth DWM).
+* [ ] Descriptions of 5 additional DWM model configurations.
+* [ ] Proofs of theorems 4.1 and 4.2 verified using Lean.
+
+__What background information is needed?__
+
+
+
+__What is in this repository?__
+
+* The folder `assets` contains:
+* The folder `c
 
 ## [Repository Scope](#scope-of-this-repository)
 
