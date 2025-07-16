@@ -34,14 +34,17 @@ __How can this repository can be used?__
 This repository supports:
 
 1. Running new DWM and DFM experiments via the `streamlit` application.
-2. Reproduction of the original figures from Wittmann_TDWMFC_2024.
+2. Reproducing or modifying the original figures from Wittmann_TDWMFC_2024.
 
-For (1), head to the `streamlit` application [here]().
+For (1), head to the `streamlit` application [here]() and enter desired variable values.
 
 For (2), either:
 
-* Download the desired file from this repository to run locally..
-* Clone this repository via `git clone ...`.
+* Download these files manually, to run locally..
+  * Figure 1 Code
+  * Figure 2 Code
+  * Figure 3 Code
+* Clone this repository via `git clone ...`, enter `src`, enter `figures`, and run `python3 <target figure>.py`.
 
 
 ## [Motivation](#motivation)
