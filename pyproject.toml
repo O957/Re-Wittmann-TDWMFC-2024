@@ -1,5 +1,5 @@
 [project]
-name = "re-tdwmfc-wittmann"
+name = "re-tdwmfc-wittmann-2024"
 version = "0.0.1"
 authors = [
   {name = "AFg6K7h4fhy2", email = "127630341+AFg6K7h4fhy2@users.noreply.github.com"},
@@ -16,9 +16,6 @@ dependencies = [
 [project.urls]
 "Repository Issues" = "https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/issues"
 "Author Homepage" = "https://github.com/AFg6K7h4fhy2"
-
-[tool.ruff.lint.mccabe]
-max-complexity = 15
 
 [tool.deptry]
 pep621_dev_dependency_groups = ["dev", "test"]

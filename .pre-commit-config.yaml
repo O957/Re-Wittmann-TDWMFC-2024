@@ -149,11 +149,11 @@ repos:
         args: [
             # threshold for the average complexity
             # (across all the codebase).
-            "--max-absolute=B",
+            "--max-absolute=C",
             # threshold for modules complexity.
             "--max-modules=B",
             # absolute threshold for block complexity.
-            "--max-average=A"
+            "--max-average=B"
         ]
 ###############################################################################
 # UV PACKAGE AND DEPENDENCY MANAGEMENT

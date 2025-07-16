@@ -170,7 +170,7 @@ wheels = [
 ]
 
 [[package]]
-name = "re-tdwmfc-wittmann"
+name = "re-tdwmfc-wittmann-2024"
 version = "0.0.1"
 source = { virtual = "." }
 dependencies = [
