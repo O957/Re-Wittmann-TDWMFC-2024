@@ -42,4 +42,4 @@ jobs:
           pip install deptry
 
       - name: Check
-        run: deptry .
+        run: deptry src
