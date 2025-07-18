@@ -527,8 +527,8 @@ def main(parsed_args: argparse.Namespace) -> None:
     )
     elapsed = time.time() - start
     print(
-        f"Experiments Using {model_selected} Ran In:\n"
-        f"{round(elapsed, 5)} Seconds.\n"
+        f"Experiments Using {model_selected} Ran In:"
+        f"\n{round(elapsed, 5)} Seconds.\n"
     )
 
     (

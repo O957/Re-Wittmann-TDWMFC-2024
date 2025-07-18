@@ -80,19 +80,22 @@ For (2), either:
 
 For (3): (pending)
 
+## [Contributing](#contributing)
 
-## [Motivation](#motivation)
+__How may I contribute to this project?__
 
-__Why does this repository exist?__
+(please, very much so, feel free to)
 
-This repository exists because:
+* Point out errors in my code or writing.
+* Propose or add to this repository additional equations or experiments that go beyond what's in Wittmann_TDWMFC_2024.
+* Provide suggestions regarding my code or writing.
 
-* I find cliodynamics and nonlinear dynamics to be both interesting and fulfilling enterprises.
-* I expected engaging with Wittmann_TDWMFC_2024 would further my understanding of cliodynamics and nonlinear dynamics.
-* I am interested in reproducing / replicating scientific enterprises, for personal development and to further human knowledge.
+Some means to contribute include:
 
-> [!NOTE]
-> This project represents my first public reproduction / replication effort. Subsequent public efforts I take in this regard may be structured differently. Even though this project has been declared FINISHED, I may sync it with future structural standards I adopt for reproduction / replication efforts.
+* Making [an issue](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/issues) in this repository.
+* Making [a pull request](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/pulls) to this repository.
+* Engaging in [a discussion thread](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/discussions) in this repository.
+* Contacting me via email: [my username]+[@]+[pro]+[ton]+[.]+[me]
 
 ## [Original Paper](#original-paper)
 
@@ -127,3 +130,16 @@ __Paper Abstract__:
 > Cliodynamics is a still a relatively new research area with the purpose of investigating and modelling historical processes. One of its first important mathematical models was proposed by Turchin and called “Demographic-Fiscal Model” (DFM). This DFM was one of the first and is one of a few models that link population with state dynamics. In this work, we propose a possible alternative to the classical Turchin DFM, which contributes to further model development and comparison essential for the field of cliodynamics. Our “Demographic-Wealth Model” (DWM) aims to also model link between population and state dynamics but makes different modelling assumptions, particularly about the type of possible taxation. As an important contribution, we employ tools from nonlinear dynamics, e.g., existence theory for periodic orbits as well as analytical and numerical bifurcation analysis, to analyze the DWM. We believe that these tools can also be helpful for many other current and future models in cliodynamics. One particular focus of our analysis is the occurrence of Hopf bifurcations. Therefore, a detailed analysis is developed regarding equilibria and their possible bifurcations. Especially noticeable is the behavior of the so-called coexistence point. While changing different parameters, a variety of Hopf bifurcations occur. In addition, it is indicated, what role Hopf bifurcations may play in the interplay between population and state dynamics. There are critical values of different parameters that yield periodic behavior and limit cycles when exceeded, similar to the “paradox of enrichment” known in ecology. This means that the DWM provides one possible avenue setup to explain in a simple format the existence of secular cycles, which have been observed in historical data. In summary, our model aims to balance simplicity, linking to the underlying processes and the goal to represent secular cycles.
 
 </details>
+
+## [Motivation](#motivation)
+
+__Why does this repository exist?__
+
+This repository exists because:
+
+* I find cliodynamics and nonlinear dynamics to be both interesting and fulfilling enterprises.
+* I expected engaging with Wittmann_TDWMFC_2024 would further my understanding of cliodynamics and nonlinear dynamics.
+* I am interested in reproducing / replicating scientific enterprises, for personal development and to further human knowledge.
+
+> [!NOTE]
+> This project represents my first public reproduction / replication effort. Subsequent public efforts I take in this regard may be structured differently. Even though this project has been declared FINISHED, I may sync it with future structural standards I adopt for reproduction / replication efforts.
