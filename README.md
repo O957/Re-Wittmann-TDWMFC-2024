@@ -3,15 +3,11 @@
 > [!CAUTION]
 > This project is currently ACTIVE but not FINISHED. As such, there may be parts of this repository that do not make much sense or that are broken!
 
-## Table Of Contents
-
-* [This Repository](installation)
-
-## [This Repository](#repository)
+## [This Repository](repository)
 
 __What is this repository?__
 
-This repository consists of a partial replication in Python of the 2024 paper (The Demographic-Wealth model for cliodynamics) by Wittmann and Kuehn, abbreviated henceforth as Wittmann_TDWMFC_2024.
+This repository is a partial replication in Python of the 2024 paper (The Demographic-Wealth model for cliodynamics) by Wittmann and Kuehn, abbreviated henceforth as Wittmann_TDWMFC_2024.
 
 Specifically, this entails that:
 
@@ -22,10 +18,34 @@ Specifically, this entails that:
 
 __What background information is needed?__
 
+The suggested know-requisites for engaging with this repository include:
+
+* Familiarity with Peter Turchin's _Historical Dynamics_.
+  * Find key equations in `./assets/misc/equations.md`.
+* Familiarity with the paper this repository targets.
+  * Find a PDF in `./assets/papers`.
+  * Find key equations in `./assets/misc/equations.md`.
+* Familiarity with the Python programming language.
+* Familiarity with nonlinear dynamics.
+
 __What is in this repository?__
 
+* The folder `.github` contains:
+  * GitHub Actions workflows.
+  * Code owners file.
 * The folder `assets` contains:
-* The folder `c
+  * Original figures from Wittmann_TDWMFC_2024 (`./assets/figures`).
+  * A PDF of Wittmann_TDWMFC_2024 (`./assets/paper`).
+  * Matplotlib styles used for plotting (`./assets/styles`)
+  * Decisions relevant to this repository (`./assets/misc`).
+  * Equations relevant to this repository (`./assets/misc`).
+  * Glossary terms relevant to this repository (`./assets/misc`).
+  * Online resources relevant to this repository (`./assets/misc`).
+  * A project roadmap for this repository (`./assets/misc`).
+  * A feature list for this repository (`./assets/misc`).
+* The folder `src` contains:
+  * Python scripts for each figure in Wittmann_TDWMFC_2024.
+  * The `streamlit` application for experiments involving the DFM and DWM.
 
 ## [Usage](#usage)
 
@@ -35,16 +55,30 @@ This repository supports:
 
 1. Running new DWM and DFM experiments via the `streamlit` application.
 2. Reproducing or modifying the original figures from Wittmann_TDWMFC_2024.
+3. Verifying the proofs for Theorem 4.1. and 4.2.
 
 For (1), head to the `streamlit` application [here]() and enter desired variable values.
 
 For (2), either:
 
-* Download these files manually, to run locally..
-  * Figure 1 Code
-  * Figure 2 Code
-  * Figure 3 Code
-* Clone this repository via `git clone ...`, enter `src`, enter `figures`, and run `python3 <target figure>.py`.
+* Download these files manually, to run or view locally..
+  * [ ] Figure 1 [Code](), [Output]()
+  * [ ] Figure 2 [Code](), [Output]()
+  * [ ] Figure 3 [Code](), [Output]()
+  * [ ] Figure 4 [Code](), [Output]()
+  * [ ] Figure 5 [Code](), [Output]()
+  * [ ] Figure 6 [Code](), [Output]()
+  * [ ] Figure 7 [Code](), [Output]()
+  * [ ] Figure 8 [Code](), [Output]()
+  * [ ] Figure 9 [Code](), [Output]()
+  * [ ] Figure 10 [Code](), [Output]()
+  * [ ] Figure 11 [Code](), [Output]()
+* Clone this repository and run code from within:
+  * `git clone ...`
+  * `cd src`
+  * `python3 <target figure>.py`.
+
+For (3): (pending)
 
 
 ## [Motivation](#motivation)
