@@ -7,12 +7,12 @@
 
 __What is this repository?__
 
-This repository is a partial replication in Python of the 2024 paper (The Demographic-Wealth model for cliodynamics) by Wittmann and Kuehn, abbreviated henceforth as Wittmann_TDWMFC_2024.
+This repository is a partial replication in Python of the 2024 paper (The Demographic-Wealth model for cliodynamics) by Wittmann and Kuehn, abbreviated hereafter as Wittmann_TDWMFC_2024.
 
-Specifically, this entails that:
+Specifically, this reproduction entails that:
 
 * [ ] Code reproductions of all figures from Wittmann_TDWMFC_2024.
-* [ ] A `streamlit` application for running experiments with the demographic fiscal model (henceform DFM) and demographic wealth models (henceforth DWM).
+* [ ] A `streamlit` application for running experiments with the demographic fiscal model (henceform abbreviated as DFM) and demographic wealth models (henceforth abbreviated as DWM).
 * [ ] Descriptions of 5 additional DWM model configurations.
 * [ ] Proofs of theorems 4.1 and 4.2 verified using Lean.
 
@@ -31,21 +31,21 @@ The suggested know-requisites for engaging with this repository include:
 __What is in this repository?__
 
 * The folder `.github` contains:
-  * GitHub Actions workflows.
-  * Code owners file.
+  * GitHub Actions workflows (see [here]()).
+  * Code owners file (see [here]()).
 * The folder `assets` contains:
-  * Original figures from Wittmann_TDWMFC_2024 (`./assets/figures`).
-  * A PDF of Wittmann_TDWMFC_2024 (`./assets/paper`).
-  * Matplotlib styles used for plotting (`./assets/styles`)
-  * Decisions relevant to this repository (`./assets/misc`).
-  * Equations relevant to this repository (`./assets/misc`).
-  * Glossary terms relevant to this repository (`./assets/misc`).
-  * Online resources relevant to this repository (`./assets/misc`).
-  * A project roadmap for this repository (`./assets/misc`).
-  * A feature list for this repository (`./assets/misc`).
+  * Original figures from Wittmann_TDWMFC_2024 (see [here]()).
+  * A PDF of Wittmann_TDWMFC_2024 (see [here]()).
+  * Matplotlib styles used for plotting (see [here]()).
+  * Decisions relevant to this repository (see [here]()).
+  * Equations relevant to this repository (see [here]()).
+  * Glossary terms relevant to this repository (see [here]()).
+  * Online resources relevant to this repository (see [here]()).
+  * A project roadmap for this repository (see [here]()).
+  * A feature list for this repository (see [here]()).
 * The folder `src` contains:
-  * Python scripts for each figure in Wittmann_TDWMFC_2024.
-  * The `streamlit` application for experiments involving the DFM and DWM.
+  * Python scripts for each figure in Wittmann_TDWMFC_2024 (see [here]()).
+  * The `streamlit` application for experiments involving the DFM and DWM (see [here]()).
 
 ## [Usage](#usage)
 
@@ -87,9 +87,9 @@ __Why does this repository exist?__
 
 This repository exists because:
 
-* I am interested in cliodynamics as a field.
-* I believe that engaging with Wittmann_TDWMFC_2024 helps me in this regard.
-* I am interested in reproducing / replicating scientific enterprises.
+* I find cliodynamics and nonlinear dynamics to be both interesting and fulfilling enterprises.
+* I expected engaging with Wittmann_TDWMFC_2024 would further my understanding of cliodynamics and nonlinear dynamics.
+* I am interested in reproducing / replicating scientific enterprises, for personal development and to further human knowledge.
 
 > [!NOTE]
 > This project represents my first public reproduction / replication effort. Subsequent public efforts I take in this regard may be structured differently. Even though this project has been declared FINISHED, I may sync it with future structural standards I adopt for reproduction / replication efforts.
@@ -100,7 +100,7 @@ __Citation__:
 
 > Wittmann, Lukas, and Christian Kuehn. "The Demographic-Wealth model for cliodynamics." Plos one 19, no. 4 (2024): e0298318.
 
-__Bibtex__:
+__Citation BibTeX__:
 
 ```
 @article{wittmann2024demographic,
@@ -115,13 +115,12 @@ __Bibtex__:
 }
 ```
 
-__Links__
+__Relevant Links__
 
-* [The paper online.](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0298318&type=printable).
-* [A PDF of the paper](./assets/2024-TDWMFC-Wittmann.pdf).
-* [The paper's GS citations](https://scholar.google.com/scholar?cites=4147056941143982529&as_sdt=5,44&sciodt=0,44&hl=en).
+* The paper online (<https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0298318&type=printable>).
+* The paper's GS citations (<https://scholar.google.com/scholar?cites=4147056941143982529&as_sdt=5,44&sciodt=0,44&hl=en>).
 
-__Abstract__:
+__Paper Abstract__:
 
 <details markdown=1>
 
