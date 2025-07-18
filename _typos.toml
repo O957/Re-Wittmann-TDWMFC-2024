@@ -12,10 +12,13 @@ AFg6K7h4fhy2 = "AFg6K7h4fhy2"
 dot_acn = ".acn"
 dot_fot = ".fot"
 dot_ist = ".ist"
+acn = "acn"
 
 [files]
 extend-exclude = [
     ".gitignore",
     ".pre-commit-config.yaml",
-    "./.github/ISSUE_TEMPLATE/*.md",
-    "*.bib"]
+    ".github/ISSUE_TEMPLATE/*.md",
+    "*.bib",
+    "protocols/github_issue_prepare_repository.md"
+]

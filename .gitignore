@@ -526,6 +526,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+# (next three added by repository owner)
+.Rprofile
+#renv.lock
+renv/
 
 # pkgdown site
 docs/
@@ -654,4 +658,8 @@ _freeze
 DS_Store
 _book/
 _book
+author_emails.txt
+# csv files must be converted to parquet files
+*.csv
+env
 author_emails.txt
