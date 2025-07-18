@@ -80,19 +80,22 @@ For (2), either:
 
 For (3): (pending)
 
+## [Contributing](#contributing)
 
-## [Motivation](#motivation)
+__How may I contribute to this project?__
 
-__Why does this repository exist?__
+(please, very much so, feel free to)
 
-This repository exists because:
+* Point out errors in my code or writing.
+* Propose or add to this repository additional equations or experiments that go beyond what's in Wittmann_TDWMFC_2024.
+* Provide suggestions regarding my code or writing.
 
-* I find cliodynamics and nonlinear dynamics to be both interesting and fulfilling enterprises.
-* I expected engaging with Wittmann_TDWMFC_2024 would further my understanding of cliodynamics and nonlinear dynamics.
-* I am interested in reproducing / replicating scientific enterprises, for personal development and to further human knowledge.
+Some means to contribute include:
 
-> [!NOTE]
-> This project represents my first public reproduction / replication effort. Subsequent public efforts I take in this regard may be structured differently. Even though this project has been declared FINISHED, I may sync it with future structural standards I adopt for reproduction / replication efforts.
+* Making [an issue](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/issues) in this repository.
+* Making [a pull request](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/pulls) to this repository.
+* Engaging in [a discussion thread](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/discussions) in this repository.
+* Contacting me via email: [my username]+[@]+[pro]+[ton]+[.]+[me]
 
 ## [Original Paper](#original-paper)
 
@@ -128,19 +131,15 @@ __Paper Abstract__:
 
 </details>
 
-## [Contributing](#contributing)
+## [Motivation](#motivation)
 
-__How may I contribute to this project?__
+__Why does this repository exist?__
 
-(please, very much so, feel free to)
+This repository exists because:
 
-* Point out errors in my code or writing.
-* Propose or add to this repository additional equations or experiments that go beyond what's in Wittmann_TDWMFC_2024.
-* Provide suggestions regarding my code or writing.
+* I find cliodynamics and nonlinear dynamics to be both interesting and fulfilling enterprises.
+* I expected engaging with Wittmann_TDWMFC_2024 would further my understanding of cliodynamics and nonlinear dynamics.
+* I am interested in reproducing / replicating scientific enterprises, for personal development and to further human knowledge.
 
-Some means to contribute include:
-
-* Making [an issue](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/issues) in this repository.
-* Making [a pull request](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/pulls) to this repository.
-* Engaging in [a discussion thread](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/discussions) in this repository.
-* Contacting me via email: [my username]+[@]+[pro]+[ton]+[.]+[me]
+> [!NOTE]
+> This project represents my first public reproduction / replication effort. Subsequent public efforts I take in this regard may be structured differently. Even though this project has been declared FINISHED, I may sync it with future structural standards I adopt for reproduction / replication efforts.
