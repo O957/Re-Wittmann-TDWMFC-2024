@@ -135,7 +135,7 @@ __How may I contribute to this project?__
 (please, very much so, feel free to)
 
 * Point out errors in my code or writing.
-* Propose additional equations or experiments that go beyond what's in Wittmann_TDWMFC_2024.
+* Propose or add to this repository additional equations or experiments that go beyond what's in Wittmann_TDWMFC_2024.
 * Provide suggestions regarding my code or writing.
 
 Some means to contribute include:
