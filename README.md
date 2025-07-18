@@ -1,58 +1,106 @@
-# Re-_The Demographic-Wealth Model For Cliodynamics_
+# Partial Replication Of (The Demographic-Wealth Model For Cliodynamics)
 
-__NOTE__: This repository is quite new and contains NO content of note!
+> [!CAUTION]
+> This project is currently ACTIVE but not FINISHED. As such, there may be parts of this repository that do not make much sense or that are broken!
 
-## Table Of Contents
+## [This Repository](repository)
 
-*
+__What is this repository?__
 
-## [Installation](#installation)
+This repository is a partial replication in Python of the 2024 paper (The Demographic-Wealth model for cliodynamics) by Wittmann and Kuehn, abbreviated hereafter as Wittmann_TDWMFC_2024.
 
-_How can one use this code?_
+Specifically, this reproduction entails that:
 
-## [Repository Scope](#scope-of-this-repository)
+* [ ] Code reproductions of all figures from Wittmann_TDWMFC_2024.
+* [ ] A `streamlit` application for running experiments with the demographic fiscal model (henceform abbreviated as DFM) and demographic wealth models (henceforth abbreviated as DWM).
+* [ ] Descriptions of 5 additional DWM model configurations.
+* [ ] Proofs of theorems 4.1 and 4.2 verified using Lean.
 
-_What does this repository consist of?_
+__What background information is needed?__
 
-(tentatively)
+The suggested know-requisites for engaging with this repository include:
 
-* All mathematical formulas have been converted to Python 3 code.
-* Theorems 4.1 and 4.2 have been validated in Lean.
-* US data has been fitted to [insert formula].
+* Familiarity with Peter Turchin's _Historical Dynamics_.
+  * Find key equations in `./assets/misc/equations.md`.
+* Familiarity with the paper this repository targets.
+  * Find a PDF in `./assets/papers`.
+  * Find key equations in `./assets/misc/equations.md`.
+* Familiarity with the Python programming language.
+* Familiarity with nonlinear dynamics.
 
-### [Motivation](#motivation)
+__What is in this repository?__
 
-_Why did the author do this?_
+* The folder `.github` contains:
+  * GitHub Actions workflows (see [here]()).
+  * Code owners file (see [here]()).
+* The folder `assets` contains:
+  * Original figures from Wittmann_TDWMFC_2024 (see [here]()).
+  * A PDF of Wittmann_TDWMFC_2024 (see [here]()).
+  * Matplotlib styles used for plotting (see [here]()).
+  * Decisions relevant to this repository (see [here]()).
+  * Equations relevant to this repository (see [here]()).
+  * Glossary terms relevant to this repository (see [here]()).
+  * Online resources relevant to this repository (see [here]()).
+  * A project roadmap for this repository (see [here]()).
+  * A feature list for this repository (see [here]()).
+* The folder `src` contains:
+  * Python scripts for each figure in Wittmann_TDWMFC_2024 (see [here]()).
+  * The `streamlit` application for experiments involving the DFM and DWM (see [here]()).
 
-### [Contribution](#contribution)
+## [Usage](#usage)
 
-_What did the author actually add?_
+__How can this repository can be used?__
 
-### [Procedure](#procedure)
+This repository supports:
 
-_How did the author do this?_
+1. Running new DWM and DFM experiments via the `streamlit` application.
+2. Reproducing or modifying the original figures from Wittmann_TDWMFC_2024.
+3. Verifying the proofs for Theorem 4.1. and 4.2.
 
-## [Model Description](#model-description)
+For (1), head to the `streamlit` application [here]() and enter desired variable values.
 
-_How do the aforementioned cliodynamics models work?_
+For (2), either:
 
-## [Results](#results)
+* Download these files manually, to run or view locally..
+  * [ ] Figure 1 [Code](), [Output]()
+  * [ ] Figure 2 [Code](), [Output]()
+  * [ ] Figure 3 [Code](), [Output]()
+  * [ ] Figure 4 [Code](), [Output]()
+  * [ ] Figure 5 [Code](), [Output]()
+  * [ ] Figure 6 [Code](), [Output]()
+  * [ ] Figure 7 [Code](), [Output]()
+  * [ ] Figure 8 [Code](), [Output]()
+  * [ ] Figure 9 [Code](), [Output]()
+  * [ ] Figure 10 [Code](), [Output]()
+  * [ ] Figure 11 [Code](), [Output]()
+* Clone this repository and run code from within:
+  * `git clone ...`
+  * `cd src`
+  * `python3 <target figure>.py`.
 
-_What does some of the output look like?_
+For (3): (pending)
+
+
+## [Motivation](#motivation)
+
+__Why does this repository exist?__
+
+This repository exists because:
+
+* I find cliodynamics and nonlinear dynamics to be both interesting and fulfilling enterprises.
+* I expected engaging with Wittmann_TDWMFC_2024 would further my understanding of cliodynamics and nonlinear dynamics.
+* I am interested in reproducing / replicating scientific enterprises, for personal development and to further human knowledge.
+
+> [!NOTE]
+> This project represents my first public reproduction / replication effort. Subsequent public efforts I take in this regard may be structured differently. Even though this project has been declared FINISHED, I may sync it with future structural standards I adopt for reproduction / replication efforts.
 
 ## [Original Paper](#original-paper)
-
-__Links__
-
-* [The paper online.](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0298318&type=printable).
-* [A PDF of the paper](./assets/2024-TDWMFC-Wittmann.pdf).
-* [The paper's GS citations](https://scholar.google.com/scholar?cites=4147056941143982529&as_sdt=5,44&sciodt=0,44&hl=en).
 
 __Citation__:
 
 > Wittmann, Lukas, and Christian Kuehn. "The Demographic-Wealth model for cliodynamics." Plos one 19, no. 4 (2024): e0298318.
 
-__Bibtex__:
+__Citation BibTeX__:
 
 ```
 @article{wittmann2024demographic,
@@ -67,6 +115,15 @@ __Bibtex__:
 }
 ```
 
-__Abstract__:
+__Relevant Links__
+
+* The paper online (<https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0298318&type=printable>).
+* The paper's GS citations (<https://scholar.google.com/scholar?cites=4147056941143982529&as_sdt=5,44&sciodt=0,44&hl=en>).
+
+__Paper Abstract__:
+
+<details markdown=1>
 
 > Cliodynamics is a still a relatively new research area with the purpose of investigating and modelling historical processes. One of its first important mathematical models was proposed by Turchin and called “Demographic-Fiscal Model” (DFM). This DFM was one of the first and is one of a few models that link population with state dynamics. In this work, we propose a possible alternative to the classical Turchin DFM, which contributes to further model development and comparison essential for the field of cliodynamics. Our “Demographic-Wealth Model” (DWM) aims to also model link between population and state dynamics but makes different modelling assumptions, particularly about the type of possible taxation. As an important contribution, we employ tools from nonlinear dynamics, e.g., existence theory for periodic orbits as well as analytical and numerical bifurcation analysis, to analyze the DWM. We believe that these tools can also be helpful for many other current and future models in cliodynamics. One particular focus of our analysis is the occurrence of Hopf bifurcations. Therefore, a detailed analysis is developed regarding equilibria and their possible bifurcations. Especially noticeable is the behavior of the so-called coexistence point. While changing different parameters, a variety of Hopf bifurcations occur. In addition, it is indicated, what role Hopf bifurcations may play in the interplay between population and state dynamics. There are critical values of different parameters that yield periodic behavior and limit cycles when exceeded, similar to the “paradox of enrichment” known in ecology. This means that the DWM provides one possible avenue setup to explain in a simple format the existence of secular cycles, which have been observed in historical data. In summary, our model aims to balance simplicity, linking to the underlying processes and the goal to represent secular cycles.
+
+</details>
