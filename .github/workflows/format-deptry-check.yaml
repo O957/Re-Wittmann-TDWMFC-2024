@@ -8,7 +8,7 @@
 #
 # Description:
 #
-# This runs deptry . on every push to main and on every pull
+# This runs deptry src on every push to main and on every pull
 # request. This action fails deptry . finds problems with the dependencies.
 #
 # Links:
