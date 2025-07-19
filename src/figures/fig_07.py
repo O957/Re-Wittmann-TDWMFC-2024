@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "jax>=0.6.2",
+#     "matplotlib>=3.10.3",
+# ]
+# ///
+
 """
 Recreates figure seven, "Periodic orbit
 continuation for the parameter k0", pp. 13/21

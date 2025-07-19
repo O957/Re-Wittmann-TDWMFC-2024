@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "jax>=0.6.2",
+#     "matplotlib>=3.10.3",
+# ]
+# ///
+
 """
 Recreates figure two, "Dynamics of model",
 pp. 06/21, of book Demographic Fiscal Model
