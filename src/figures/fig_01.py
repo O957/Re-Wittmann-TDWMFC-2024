@@ -16,6 +16,7 @@ Historical Dynamics (Turchin, 2003, pp.121) as stated in the
 cliodynamics) by Wittmann and Kuehn.
 """
 
+import diffrax
 import jax
 import jax.numpy as jnp
 import matplotlib.pyplot as plt
@@ -23,12 +24,11 @@ from jax.typing import ArrayLike
 
 plt.rcParams.update(
     {
-        "figure.figsize": (6, 6),  # figure size
+        "figure.figsize": (10, 8),  # figure size
         "figure.dpi": 150,  # figure dots per inch
         "text.usetex": True,  # LaTeX rendering for text
         "axes.linewidth": 1.0,  # line width for axes
         "lines.linewidth": 1.0,  # line width for plot lines
-        "lines.marker": None,  # no markers on the lines
         "font.family": "serif",  # use serif fonts
         "axes.labelsize": 15,  # axis label font size
         "axes.titlesize": 20,  # axis title font size
@@ -95,13 +95,7 @@ def DFM(t: int, y: ArrayLike, args: ArrayLike) -> jax.Array:
     jax.Array
         The resultant population and state resources.
     """
-    # population, state resources
     N, S = y
-    # population growth rate, taxation rate,
-    # expenditure rate, initial carrying
-    # capacity, carrying capacity increase
-    # capacity from state resources,
-    # initial state resources
     r, init_rho, beta, init_k, c, init_s = args
     dN = jnp.where(
         S >= 0.0,
@@ -116,21 +110,54 @@ def DFM(t: int, y: ArrayLike, args: ArrayLike) -> jax.Array:
     return jnp.array([dN, dS])
 
 
-# %% LOAD STYLE SHEET IF AVAILABLE
+def main():
+    # PARAMETERS
+
+    model_name = "DFM"
+    t0 = 0  # initial time of experiment
+    t1 = 500  # final time of experiment
+    dt0 = 1  # initial step size for ODE solver
+    init_S = 0.0  # added state resources
+    init_N = 0.5  # initial population
+    init_rho = 1  # taxation rate
+    init_s = 10  # initial state resources
+    init_k = 1  # initial carrying capacity (CC)
+    max_k = 4  # maximum carrying capacity (CC)
+    c = max_k - init_k  # maximum possible CC gain via increasing S
+    r = 0.02  # population growth rate
+    betas = [0.0, 0.1, 0.25, 0.4]  # expenditure rates
+
+    # ODE SOLVER AND PLOTTING SETUP
+
+    y0 = jnp.array([init_N, init_S])
+    saveat = diffrax.SaveAt(ts=jnp.linspace(t0, t1, t1 - t0))
+    solver = diffrax.Tsit5()
+    term = diffrax.ODETerm(DFM)
+    _, axes = plt.subplots(nrows=1, ncols=2)
+    axes[0].set_title(f"{model_name}: Population Change")
+    axes[0].set_ylabel(r"$N$", rotation=90)
+    axes[0].set_xlabel("t")
+    axes[1].set_title(f"{model_name}: State Resources")
+    axes[1].set_ylabel(r"$S$", rotation=90)
+    axes[1].set_xlabel("t")
+    axes[1].set_xlim(xmin=0)
+    axes[1].set_ylim(ymin=0)
+    axes[0].set_xlim(xmin=0)
+    axes[0].set_ylim(ymin=0)
+
+    # ODE SOLVING AND PLOTTING
+    beta_colors = ["black", "green", "blue", "red"]
+    for i, beta in enumerate(betas):
+        args = jnp.array([r, init_rho, beta, init_k, c, init_s])
+        sol = diffrax.diffeqsolve(
+            term, solver, t0, t1, dt0, y0, args=args, saveat=saveat
+        )
+        N, S = sol.ys.T
+        timepoints = sol.ts
+        axes[0].plot(timepoints.tolist(), N.tolist(), color=beta_colors[i])
+        axes[1].plot(timepoints.tolist(), S.tolist(), color=beta_colors[i])
+    plt.savefig("figure_01.png")
 
 
-model_name = "DFM"
-t0 = 0  # initial time
-t1 = 500  # final time
-dt0 = 1  #
-init_S = 0.0
-init_N = 0.5
-init_rho = 1
-init_s = 10
-init_k = 1
-max_k = 4
-c = 3
-r = 0.02
-beta = [0.0, 0.1, 0.25, 0.4]
-
-#
+if __name__ == "__main__":
+    main()
