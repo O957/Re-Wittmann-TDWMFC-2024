@@ -19,27 +19,26 @@ cliodynamics) by Wittmann and Kuehn.
 import diffrax
 import jax
 import jax.numpy as jnp
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from jax.typing import ArrayLike
 
-plt.rcParams.update(
-    {
-        "figure.figsize": (10, 8),  # figure size
-        "figure.dpi": 150,  # figure dots per inch
-        "text.usetex": True,  # LaTeX rendering for text
-        "axes.linewidth": 1.0,  # line width for axes
-        "lines.linewidth": 1.0,  # line width for plot lines
-        "font.family": "serif",  # use serif fonts
-        "axes.labelsize": 15,  # axis label font size
-        "axes.titlesize": 20,  # axis title font size
-        "xtick.labelsize": 12,  # x-axis tick label size
-        "ytick.labelsize": 12,  # y-axis tick label size
-        "legend.fontsize": 12,  # legend font size
-        "figure.autolayout": True,  # enable tight layout
-    }
-)
-
-SAVE_PATH = "."  # current directory save
+mpl.rcParams["figure.figsize"] = (10, 5)  # figure size
+mpl.rcParams["figure.dpi"] = 150  # figure dots per inch
+mpl.rcParams["text.usetex"] = True  # LaTeX rendering for text
+mpl.rcParams["axes.linewidth"] = 1.0  # line width for axes
+mpl.rcParams["font.family"] = "serif"  # use serif fonts
+mpl.rcParams["axes.labelsize"] = 15  # axis label font size
+mpl.rcParams["axes.titlesize"] = 20  # axis title font size
+mpl.rcParams["xtick.labelsize"] = 12  # x-axis tick label size
+mpl.rcParams["ytick.labelsize"] = 12  # y-axis tick label size
+mpl.rcParams["legend.fontsize"] = 12  # legend font size
+# mpl.rcParams["figure.autolayout"] = True       # enable tight layout
+mpl.rcParams["axes.grid"] = True  # enable grid
+mpl.rcParams["grid.color"] = "lightgray"  # grid line color
+mpl.rcParams["grid.linestyle"] = "-"  # grid line style
+mpl.rcParams["grid.linewidth"] = 0.7  # grid line width
+mpl.rcParams["grid.alpha"] = 0.7  # grid transparency
 
 
 def k(S: float, init_k: int, c: int, init_s: int) -> float:
@@ -70,7 +69,7 @@ def k(S: float, init_k: int, c: int, init_s: int) -> float:
     return init_k + (c * (S / (init_s + S)))
 
 
-def DFM(t: int, y: ArrayLike, args: ArrayLike) -> jax.Array:
+def DFM(t: int, y: ArrayLike, args: tuple) -> jax.Array:
     """
     The Demographic Fiscal Model (DFM), which models a
     state's population and accumulated resources, as
@@ -87,7 +86,7 @@ def DFM(t: int, y: ArrayLike, args: ArrayLike) -> jax.Array:
     y : ArrayLike
         The current population and accumulated state
         resources.
-    args : ArrayLike
+    args : tuple
         The variables and parameters of the ODE system.
 
     Returns
@@ -133,30 +132,35 @@ def main():
     saveat = diffrax.SaveAt(ts=jnp.linspace(t0, t1, t1 - t0))
     solver = diffrax.Tsit5()
     term = diffrax.ODETerm(DFM)
-    _, axes = plt.subplots(nrows=1, ncols=2)
+    figure, axes = plt.subplots(nrows=1, ncols=2)
     axes[0].set_title(f"{model_name}: Population Change")
     axes[0].set_ylabel(r"$N$", rotation=90)
     axes[0].set_xlabel("t")
     axes[1].set_title(f"{model_name}: State Resources")
     axes[1].set_ylabel(r"$S$", rotation=90)
     axes[1].set_xlabel("t")
-    axes[1].set_xlim(xmin=0)
-    axes[1].set_ylim(ymin=0)
-    axes[0].set_xlim(xmin=0)
-    axes[0].set_ylim(ymin=0)
 
     # ODE SOLVING AND PLOTTING
+
     beta_colors = ["black", "green", "blue", "red"]
     for i, beta in enumerate(betas):
-        args = jnp.array([r, init_rho, beta, init_k, c, init_s])
+        args = (r, init_rho, beta, init_k, c, init_s)
         sol = diffrax.diffeqsolve(
             term, solver, t0, t1, dt0, y0, args=args, saveat=saveat
         )
         N, S = sol.ys.T
-        timepoints = sol.ts
-        axes[0].plot(timepoints.tolist(), N.tolist(), color=beta_colors[i])
-        axes[1].plot(timepoints.tolist(), S.tolist(), color=beta_colors[i])
-    plt.savefig("figure_01.png")
+        ts = sol.ts
+        axes[0].plot(ts.tolist(), N.tolist(), color=beta_colors[i])
+        axes[1].plot(ts.tolist(), S.tolist(), color=beta_colors[i])
+    # these must be defined after plotting
+    axes[0].set_xlim(left=0.0)
+    axes[0].set_ylim(bottom=0.0)
+    axes[1].set_xlim(left=0.0)
+    axes[1].set_ylim(bottom=0.0)
+
+    # FIGURE SHOWING AND SAVING
+    figure.savefig("figure_01.png")
+    plt.show()
 
 
 if __name__ == "__main__":
