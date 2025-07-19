@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "jax>=0.6.2",
+#     "matplotlib>=3.10.3",
+# ]
+# ///
+
 """
 Recreates figure five, "Equilibrium point
 continuation for the parameter", pp.12/21,
