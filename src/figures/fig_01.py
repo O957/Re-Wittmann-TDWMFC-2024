@@ -2,9 +2,11 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "jax>=0.6.2",
+# .    "diffrax>=0.7.0",
 #     "matplotlib>=3.10.3",
 # ]
 # ///
+
 
 """
 Recreates figure one, "Dynamics of model (1)", pp. 06/21,
@@ -13,8 +15,6 @@ Historical Dynamics (Turchin, 2003, pp.121) as stated in the
 2024 paper (The Demographic-Wealth model for
 cliodynamics) by Wittmann and Kuehn.
 """
-
-import pathlib
 
 import jax
 import jax.numpy as jnp
@@ -38,6 +38,8 @@ plt.rcParams.update(
         "figure.autolayout": True,  # enable tight layout
     }
 )
+
+SAVE_PATH = "."  # current directory save
 
 
 def k(S: float, init_k: int, c: int, init_s: int) -> float:
@@ -116,19 +118,14 @@ def DFM(t: int, y: ArrayLike, args: ArrayLike) -> jax.Array:
 
 # %% LOAD STYLE SHEET IF AVAILABLE
 
-base_style_path = pathlib.Path("../assets/styles")
-style = "fig_replication"
-style_path = base_style_path / (style + ".mplstyle")
-if style_path.exists():
-    plt.style.use(str(style_path))
 
-
-t0 = 0
-t1 = 500
-dt0 = 1
+model_name = "DFM"
+t0 = 0  # initial time
+t1 = 500  # final time
+dt0 = 1  #
 init_S = 0.0
 init_N = 0.5
-init_p = 1
+init_rho = 1
 init_s = 10
 init_k = 1
 max_k = 4
