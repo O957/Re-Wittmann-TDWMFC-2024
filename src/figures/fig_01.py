@@ -2,18 +2,18 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "jax>=0.6.2",
-# .    "diffrax>=0.7.0",
+# .   "diffrax>=0.7.0",
 #     "matplotlib>=3.10.3",
 # ]
 # ///
 
 
 """
-Recreates figure one, "Dynamics of model (1)", pp. 06/21,
-where model one is the Demographic Fiscal Model (DFM) from
-Historical Dynamics (Turchin, 2003, pp.121) as stated in the
-2024 paper (The Demographic-Wealth model for
-cliodynamics) by Wittmann and Kuehn.
+Recreates figure one, "Dynamics of model (1)", pp. 06/21 of
+the 2024 paper (The Demographic-Wealth model for
+cliodynamics) by Wittmann and Kuehn, where model one is
+the Demographic Fiscal Model (DFM) from Historical
+Dynamics (Turchin, 2003, pp.121).
 """
 
 import diffrax
@@ -159,6 +159,7 @@ def main():
     axes[1].set_ylim(bottom=0.0)
 
     # FIGURE SHOWING AND SAVING
+
     figure.savefig("figure_01.png")
     plt.show()
 
