@@ -11,12 +11,11 @@ from jax.typing import ArrayLike
 
 def k(S: float, init_k: int, c: int, init_s: int) -> float:
     """
-    A state's carrying capacity, as used in
-    the DFM. Determined in part by the
-    state's current resources, it's initial
-    carry capacity, how well the state can
-    convert resources into carrying capacity,
-    and the state's initial resources.
+    A state's carrying capacity, as used in the DFM.
+    Determined in part by the state's current resources,
+    it's initial carrying capacity, how well the state can
+    convert resources into carrying capacity, and the
+    state's initial resources.
 
     Parameters
     ----------
@@ -25,9 +24,8 @@ def k(S: float, init_k: int, c: int, init_s: int) -> float:
     init_k : int
         The state's initial carrying capacity.
     c : int
-        How well the state can convert
-        resources into carrying capacity, i.e.
-        k_max - k_init.
+        How well the state can convert resources into
+        carrying capacity, i.e. k_max - k_init.
     init_s : int
         The state's initial resources.
 
@@ -41,14 +39,12 @@ def k(S: float, init_k: int, c: int, init_s: int) -> float:
 
 def DFM(t: int, y: ArrayLike, args: ArrayLike) -> jax.Array:
     """
-    The Demographic Fiscal Model (DFM), which
-    models a state's population and
-    accumulated resources, as determined by
-    its initial population and initial
-    accumulated resources, along with its
-    rate of population growth, per capita
-    taxation rate, ability to convert resources
-    into carrying capacity, and its
+    The Demographic Fiscal Model (DFM), which models a
+    state's population and accumulated resources, as
+    determined by its initial population and initial
+    accumulated resources, along with its rate of
+    population growth, per capita taxation rate, ability
+    to convert resources into carrying capacity, and its
     per capita expenditures.
 
     Parameters
@@ -56,17 +52,15 @@ def DFM(t: int, y: ArrayLike, args: ArrayLike) -> jax.Array:
     t : int
         The current point in time.
     y : ArrayLike
-        The current population and accumulated
-        state resources.
+        The current population and accumulated state
+        resources.
     args : ArrayLike
-        The variables and parameters of the
-        ODE system.
+        The variables and parameters of the ODE system.
 
     Returns
     -------
     jax.Array
-        The resultant population and state
-        resources.
+        The resultant population and state resources.
     """
     # population, state resources
     N, S = y

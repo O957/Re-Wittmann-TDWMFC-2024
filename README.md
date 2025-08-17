@@ -11,7 +11,7 @@ This repository is a partial replication in Python of the 2024 paper (The Demogr
 
 Specifically, this reproduction entails that:
 
-* [ ] Code reproductions of all figures from Wittmann_TDWMFC_2024.
+* [ ] Python code reproductions of all figures from Wittmann_TDWMFC_2024.
 * [ ] A `streamlit` application for running experiments with the demographic fiscal model (henceform abbreviated as DFM) and demographic wealth models (henceforth abbreviated as DWM).
 * [ ] Descriptions of 5 additional DWM model configurations.
 * [ ] Proofs of theorems 4.1 and 4.2 verified using Lean.
