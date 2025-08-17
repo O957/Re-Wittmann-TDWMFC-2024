@@ -7,14 +7,19 @@
 # ]
 # ///
 
-
 """
 Recreates figure one, "Dynamics of model (1)", pp. 06/21 of
 the 2024 paper (The Demographic-Wealth model for
 cliodynamics) by Wittmann and Kuehn, where model one is
 the Demographic Fiscal Model (DFM) from Historical
 Dynamics (Turchin, 2003, pp.121).
+
+Run this file via:
+python3 fig_01.py
+python3 ./src/figures/fig_01.py
 """
+
+import pathlib
 
 import diffrax
 import jax
@@ -22,6 +27,9 @@ import jax.numpy as jnp
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from jax.typing import ArrayLike
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+OUTPUT_DIR = ROOT / "output"
 
 mpl.rcParams["figure.figsize"] = (10, 5)  # figure size
 mpl.rcParams["figure.dpi"] = 150  # figure dots per inch
@@ -142,7 +150,7 @@ def main():
 
     # ODE SOLVING AND PLOTTING
 
-    beta_colors = ["black", "green", "blue", "red"]
+    beta_colors = ["black", "limegreen", "blue", "red"]
     for i, beta in enumerate(betas):
         args = (r, init_rho, beta, init_k, c, init_s)
         sol = diffrax.diffeqsolve(
@@ -159,10 +167,12 @@ def main():
     axes[1].set_ylim(bottom=0.0)
 
     # FIGURE SHOWING AND SAVING
-
-    figure.savefig("figure_01.png")
+    save_path = OUTPUT_DIR.joinpath("figure_01.png")
+    figure.savefig(save_path)
     plt.show()
 
 
 if __name__ == "__main__":
     main()
+
+# %%

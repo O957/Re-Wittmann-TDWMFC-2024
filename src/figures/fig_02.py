@@ -14,7 +14,13 @@ the 2024 paper (The Demographic-Wealth model for
 cliodynamics) by Wittmann and Kuehn, where model one is
 the Demographic Fiscal Model (DFM) from Historical
 Dynamics (Turchin, 2003, pp.121).
+
+Run this file via:
+python3 fig_02.py
+python3 ./src/figures/fig_02.py
 """
+
+import pathlib
 
 import diffrax
 import jax
@@ -22,6 +28,9 @@ import jax.numpy as jnp
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from jax.typing import ArrayLike
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+OUTPUT_DIR = ROOT / "output"
 
 mpl.rcParams["figure.figsize"] = (10, 5)  # figure size
 mpl.rcParams["figure.dpi"] = 150  # figure dots per inch
@@ -114,7 +123,7 @@ def main():
 
     model_name = "DFM"
     t0 = 0  # initial time of experiment
-    t1 = 500  # final time of experiment
+    t1 = 1000  # final time of experiment
     dt0 = 1  # initial step size for ODE solver
     init_S = 0.0  # added state resources
     init_N = 0.5  # initial population
@@ -142,7 +151,7 @@ def main():
 
     # ODE SOLVING AND PLOTTING
 
-    rho_colors = ["red", "blue", "green"]
+    rho_colors = ["red", "blue", "limegreen"]
     for i, rho in enumerate(init_rhos):
         args = (r, rho, beta, init_k, c, init_s)
         sol = diffrax.diffeqsolve(
@@ -160,7 +169,8 @@ def main():
 
     # FIGURE SHOWING AND SAVING
 
-    figure.savefig("figure_02.png")
+    save_path = OUTPUT_DIR.joinpath("figure_02.png")
+    figure.savefig(save_path)
     plt.show()
 
 
