@@ -92,9 +92,9 @@ __How may I contribute to this project?__
 
 Some means to contribute include:
 
-* Making [an issue](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/issues) in this repository.
-* Making [a pull request](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/pulls) to this repository.
-* Engaging in [a discussion thread](https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/discussions) in this repository.
+* Making [an issue](https://github.com/O957/Re-Wittmann-TDWMFC-2024/issues) in this repository.
+* Making [a pull request](https://github.com/O957/Re-Wittmann-TDWMFC-2024/pulls) to this repository.
+* Engaging in [a discussion thread](https://github.com/O957/Re-Wittmann-TDWMFC-2024/discussions) in this repository.
 * Contacting me via email: [my username]+[@]+[pro]+[ton]+[.]+[me]
 
 ## [Original Paper](#original-paper)

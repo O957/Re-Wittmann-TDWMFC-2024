@@ -2,7 +2,7 @@
 name = "re-wittmann-tdwmfc-2024"
 version = "0.0.1"
 authors = [
-  {name = "AFg6K7h4fhy2", email = "127630341+AFg6K7h4fhy2@users.noreply.github.com"},
+  {name = "O957", email = "127630341+O957@users.noreply.github.com"},
 ]
 description = "A partial replication in Python of the 2024 paper (The Demographic-Wealth model for cliodynamics) by Wittmann and Kuehn."
 license = "Apache-2.0"
@@ -18,5 +18,5 @@ dependencies = [
 ]
 
 [project.urls]
-"Repository Issues" = "https://github.com/AFg6K7h4fhy2/Re-TDWMFC-2024/issues"
-"Author Homepage" = "https://github.com/AFg6K7h4fhy2"
+"Repository Issues" = "https://github.com/O957/Re-Wittmann-TDWMFC-2024/issues"
+"Author Homepage" = "https://github.com/O957"
