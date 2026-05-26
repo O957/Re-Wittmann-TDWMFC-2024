@@ -1,0 +1,11 @@
+line-length = 79
+
+[lint]
+select = [
+  "I", "E", "W", "F", "B", "C90", "UP", "SIM",
+  "NPY", "PTH", "RET", "ARG", "ERA", "RUF",
+]
+ignore = ["E741", "E731", "W191", "B018", "C901"]
+
+[lint.isort]
+force-sort-within-sections = true
