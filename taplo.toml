@@ -1,0 +1,6 @@
+[formatting]
+align_entries = true
+column_width  = 79
+
+# see https://taplo.tamasfe.dev/configuration/formatter-options.html
+# for more formatting options

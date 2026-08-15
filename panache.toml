@@ -1,0 +1,32 @@
+flavor         = "quarto"
+extend-exclude = ["_site/**", "_freeze/**", "renv/**"]
+
+[format]
+wrap                  = "reflow"
+line-width            = 79
+line-ending           = "auto"
+math-delimiter-style  = "dollars"
+
+[flavor-overrides]
+"README.md" = "gfm"
+
+[extensions]
+executable-code = true
+
+[formatters]
+python = "ruff"
+r      = "air"
+yaml   = "yamlfmt"
+
+[linters]
+python = "ruff"
+r      = "jarl"
+
+[lint]
+select = ["D", "ANN"]
+
+[lint.rules]
+missing-chunk-labels = false
+
+[lint.pydocstyle]
+convention = "numpy"
