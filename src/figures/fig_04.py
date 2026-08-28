@@ -2,6 +2,7 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "jax>=0.6.2",
+# .    "diffrax>=0.7.0",
 #     "matplotlib>=3.10.3",
 # ]
 # ///
